@@ -15,7 +15,9 @@ git@github.com:achayan/fancy_nodeview.git
 ```python
 You need to make sure you add your path to KATANA_RESOURCES
 example 
-setenv KATANA_RESOURCES ~/dev/katana_dev/fancy_nodeview/
+setenv KATANA_RESOURCES ~/dev/katana_dev/fancy_nodeview
+# windows
+set KATANA_RESOURCES=C:\dev\katana_dev\fancy_nodeview
 ```
 One you added `KATANA_RESOURCES` properly then on the `Tabs`Menu you will have `Fancy Node Graph`
 
