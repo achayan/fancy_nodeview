@@ -10,7 +10,7 @@ class DropPanelPanel(UI4.Tabs.BaseTab):
         layout = QtWidgets.QVBoxLayout(self)
         self.__formats = {".abc":["Alembic_In", "abcAsset"], ".usd":["UsdIn", "fileName"],".usda":["UsdIn", "fileName"],".usdc":["UsdIn", "fileName"], ".usdz":["UsdIn", "fileName"]}
         self.setLayout(layout)
-        # this is a dumb idea but it works. For some reason we get event triggered twice
+        # this is a bad idea but it works. For some reason we get event triggered twice
         # With this check we can stop that
         self.isTriggered = False
         self.searchStr = "file://"
