@@ -23,6 +23,8 @@ One you added `KATANA_RESOURCES` properly then on the `Tabs`Menu you will have `
 
 Once you have the `Fancy Node Graph` open you will be able to drag and drop files and that will create nodes inside katana.
 
+If you have a node selected then new nodes will be placed under that or at 0 0 
+
 You can extend file types in line 10
 ```python
 # you need to give file extension type and node type and attribute name

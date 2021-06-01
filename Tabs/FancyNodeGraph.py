@@ -32,10 +32,16 @@ class DropPanelPanel(UI4.Tabs.BaseTab):
                         impFile = eachItem.replace(self.searchStr, "")
                         if os.path.exists(impFile):
                             file_path, ext = os.path.splitext(impFile)
+                            xn = yn = 0
+                            allNodes = NodegraphAPI.GetAllSelectedNodes()
+                            if allNodes:
+                                (xn, yn) = NodegraphAPI.GetNodePosition(allNodes[0])
                             if ext in self.__formats:
                                 nodeData = self.__formats[ext]
                                 inNode = NodegraphAPI.CreateNode(nodeData[0],NodegraphAPI.GetRootNode())
                                 inNode.getParameter(nodeData[1]).setValue(str(impFile), 0)
+                                inNode.setName(str(os.path.basename(file_path)))
+                                NodegraphAPI.SetNodePosition(inNode, (xn, yn - 50))
                 self.isTriggered = True
                 return True
             else:
